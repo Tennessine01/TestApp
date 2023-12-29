@@ -1,0 +1,61 @@
+plugins {
+    id 'com.android.application'
+    id 'kotlin-android'
+}
+
+android {
+    namespace 'vn.edu.usth.englishdictionary'
+    //noinspection GradleCompatible
+    compileSdk 33
+    defaultConfig {
+        applicationId "vn.edu.usth.englishdictionary"
+        minSdk 26
+        targetSdk 33
+        versionCode 1
+        versionName "1.0"
+        minSdkVersion 26
+        targetSdk 33
+        //noinspection OldTargetApi
+        multiDexEnabled true
+        vectorDrawables.useSupportLibrary = true
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        android.applicationVariants.all { variant ->
+            variant.outputs.all {
+                outputFileName = "TraTuDien v${variant.versionName}-${variant.versionCode}.apk"
+            }
+        }
+
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.debug
+        }
+        debug {
+            signingConfig signingConfigs.debug
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    buildFeatures {
+        buildConfig = true
+        viewBinding true
+    }
+    lint {
+        abortOnError false
+        checkReleaseBuilds false
+    }
+    buildToolsVersion '33.0.0'
+}
+
+dependencies {
+    implementation group: 'androidx.annotation', name: 'annotation', version: '1.7.0-alpha02'
+    implementation 'com.google.android.material:material:1.9.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+}

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5pt"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/btxoatratu"
+            android:padding="15dp"
+            android:textSize="20dp"
+            android:text="Xóa Tất Cả Lịch Sử Tra Từ"
+            android:textAllCaps="false"
+            android:background="@drawable/my_button"
+            android:textColor="@color/white">
+
+        </androidx.appcompat.widget.AppCompatButton>
+    </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5pt"
+            android:orientation="vertical">
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/btxoaTest"
+                android:padding="15dp"
+                android:background="@drawable/my_button"
+                android:textAllCaps="false"
+                android:textSize="20dp"
+                android:textColor="@color/white"
+                android:text="Xóa Tất Cả Lịch Sử Test"
+                >
+            </androidx.appcompat.widget.AppCompatButton>
+
+        </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Thông tin ứng dụng"
+        android:textSize="10pt" />
+
+    <TextView
+        android:id="@+id/tvThongtin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="8pt"
+        android:text="Thông tin ứng dụng" />
+</LinearLayout>
